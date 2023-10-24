@@ -7,20 +7,20 @@ La aplicacion puede servir para:
 - Botones reutilizables
 - ...
 
-Lo que enseña esta seccion:
+## Lo que enseña esta seccion
 
-  Esta sección crearemos nuestra primera aplicación real de Flutter, la que nos enseñará cosas como:
+Esta sección crearemos nuestra primera aplicación real de Flutter, la que nos enseñará cosas como:
 
-    - Stateful y Stateless Widgets
-    - Scaffold
-    - FloatingActionButtons
-    - Column
-    - Widgets personalizados
-    - Constantes
-    - MaterialApp
-    - Introducción a Material Design 3
-    - Color Schemes
-    - AppBars
+- Stateful y Stateless Widgets
+- Scaffold
+- FloatingActionButtons
+- Column
+- Widgets personalizados
+- Constantes
+- MaterialApp
+- Introducción a Material Design 3
+- Color Schemes
+- AppBars
 
 ## Getting Started
 
