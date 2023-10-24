@@ -41,22 +41,19 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
         floatingActionButton: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            CustomButton(icon: Icons.refresh_outlined,),
-
-            FloatingActionButton(
-              shape: const StadiumBorder(), // hacer el boton redondo
+            CustomButton(
+              icon: Icons.refresh_outlined,
               onPressed: () {            
                 clickCounter = 0;
                 setState(() {}); // FUNCION QUE ACTUALIZA LOS WIDGETS, QUE REENDERIZA LOS WIDGETS de nuevo
               },
-              child: const Icon(Icons.refresh_outlined),
             ),
 
             // Para agregar una SEPARACION
             const SizedBox(height: 10),
 
-            FloatingActionButton(
-              shape: const StadiumBorder(), // hacer el boton redondo
+            CustomButton(
+              icon: Icons.plus_one,
               onPressed: () {
                 clickCounter += 1;                            
                 setState(() {}); // FUNCION QUE ACTUALIZA LOS WIDGETS, QUE REENDERIZA LOS WIDGETS de nuevo
@@ -66,20 +63,20 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
                   clickCounter += 1;
                 });
                 */
-              },
-              child: const Icon(Icons.plus_one),
+              },              
             ),
-
-            CustomButton(icon: Icons.plus_one,),
 
             // Para agregar una SEPARACION
             const SizedBox(height: 10),
 
-                // if (clickCounter == 0) return; // QUE NO HAGA NADA MAS SI EL VALOR ES CERO
-                // clickCounter -= 1;
-                // setState(() {}); // FUNCION QUE ACTUALIZA LOS WIDGETS, QUE REENDERIZA LOS WIDGETS de nuevo
-
-            CustomButton(icon: Icons.exposure_minus_1_outlined,),
+            CustomButton(
+              icon: Icons.exposure_minus_1_outlined,
+              onPressed: () {
+                if (clickCounter == 0) return; // QUE NO HAGA NADA MAS SI EL VALOR ES CERO
+                clickCounter -= 1;
+                setState(() {}); // FUNCION QUE ACTUALIZA LOS WIDGETS, QUE REENDERIZA LOS WIDGETS de nuevo                
+              },
+            ),
           ],
         ) 
     );
@@ -89,21 +86,19 @@ class _CounterFunctionsScreenState extends State<CounterFunctionsScreen> {
 class CustomButton extends StatelessWidget {
 
   final IconData icon;
-  
+  final VoidCallback? onPressed; // VoidCallback es una funcion que NO DEVUELVE NADA. Con '?' decimos que es un argumento OPCIONAL
 
   const CustomButton({
     super.key, 
-    required this.icon,
-    
+    required this.icon, 
+    this.onPressed,    
   });
 
   @override
   Widget build(BuildContext context) {
     return FloatingActionButton(
-      shape: const StadiumBorder(), // hacer el boton redondo
-      onPressed: () {
-
-      },
+      // shape: const StadiumBorder(), // hacer el boton redondo
+      onPressed: onPressed, // el USUARIO MANDA LA FUNCION QUE SE TIENE QUE EJECUTAR COMO PARAMETRO
       child: Icon(icon),
     );
   }
