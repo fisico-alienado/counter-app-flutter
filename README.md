@@ -1,6 +1,34 @@
 # flutter_application_1
 
-A new Flutter project.
+La aplicacion puede servir para:
+
+- Contar la gente (internamente) que entra a nuestra tienda/app/espacio...
+- Contar el numero de veces que perdimos en un juego
+- Botones reutilizables
+
+Lo que enseña esta seccion:
+
+  Esta sección crearemos nuestra primera aplicación real de Flutter, la que nos enseñará cosas como:
+
+    - Stateful y Stateless Widgets
+
+    - Scaffold
+
+    - FloatingActionButtons
+
+    - Column
+
+    - Widgets personalizados
+
+    - Constantes
+
+    - MaterialApp
+
+    - Introducción a Material Design 3
+
+    - Color Schemes
+
+    - AppBars
 
 ## Getting Started
 
