@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         colorSchemeSeed: Colors.blue
        ),
        home: const CounterFunctionsScreen()
+      //  home: const CounterScreen()
     );
   }
 }
