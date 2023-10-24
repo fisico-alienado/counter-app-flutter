@@ -1,4 +1,4 @@
-# flutter_application_1
+# Aplicación de Flutter: Contador funcional
 
 La aplicacion puede servir para:
 
