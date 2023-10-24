@@ -23,7 +23,7 @@ class _CounterScreenState extends State<CounterScreen> {
               Text('$clickCounter',
                   style: const TextStyle(
                       fontSize: 160, fontWeight: FontWeight.w100)),
-              const Text('Cantidad de clicks', style: TextStyle(fontSize: 25)),
+              Text('Click${clickCounter == 1 ? '' : 's'}', style: const TextStyle(fontSize: 25)),
             ],
           ),
         ),
@@ -33,7 +33,7 @@ class _CounterScreenState extends State<CounterScreen> {
             setState(() {}); // FUNCION QUE ACTUALIZA LOS WIDGETS, QUE REENDERIZA LOS WIDGETS de nuevo
             // Otra forma valida
             /*
-                        setState(() {
+            setState(() {
               clickCounter += 1;
             });
             */
